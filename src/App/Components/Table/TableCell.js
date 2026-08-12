@@ -8,6 +8,7 @@ import ButtonIconDownload from '../Buttons/Icons/ButtonIconDownload.js'
 import ButtonIconInfo from '../Buttons/Icons/ButtonIconInfo.js'
 import ButtonIconPlay from '../Buttons/Icons/ButtonIconPlay.js'
 import ButtonIconMicrophone from '../Buttons/Icons/ButtonIconMicrophone.js'
+import { imagePathToSrc } from '../../Helpers/File.js'
 
 import styles from './Table.module.scss'
 
@@ -79,7 +80,7 @@ function TableCell ({data, selected, onSelect, onPlay, onStudio, onInfo, onOptim
     <h5 className={styles.cellTitle} title={data.cellTitle}><span className={styles.cellEllipsis}>{data.cellTitle}</span></h5>
     {data.cellSubtitle && <p className={styles.cellSubtitle} title={data.cellSubtitle}><span className={styles.cellEllipsis}>{data.cellSubtitle}</span></p>}
     <div className={styles.imageContainer}>
-      <img src={data.image} className={styles.cellImage} alt="" loading="lazy"/>
+      <img src={imagePathToSrc(data.image)} className={styles.cellImage} alt="" loading="lazy"/>
       {data.cellLabelIcon && <p className={styles.cellImageLabel} title={data.cellLabelIconText}>{data.cellLabelIcon}</p>}
     </div>
     {

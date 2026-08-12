@@ -3,6 +3,7 @@ import {useLocale} from '../../Locale/LocaleHooks.js'
 import InputLayout from './InputLayout.js'
 import ButtonIconXMark from '../../Buttons/Icons/ButtonIconXMark.js'
 import InputDropFile from './InputDropFile.js'
+import { imagePathToSrc } from '../../../Helpers/File.js'
 
 import styles from './Input.module.scss'
 
@@ -80,7 +81,7 @@ function InputImage(
                        id={id}
                        ref={refCallback}/>
         {imagePath &&
-          <img src={encodeURI(imagePath.replaceAll('\\', '/')) + '?time=' + Date.now()}
+          <img src={imagePathToSrc(imagePath) + '?time=' + Date.now()}
                className={styles.inputImageImg}
                alt=""/>}
       </div>

@@ -8,6 +8,7 @@ import ButtonIconChevronUp from '../Buttons/Icons/ButtonIconChevronUp.js'
 import ButtonIconChevronDown from '../Buttons/Icons/ButtonIconChevronDown.js'
 import TableCell from './TableCell.js'
 import TableList from './TableList.js'
+import { imagePathToSrc } from '../../Helpers/File.js'
 
 import styles from './Table.module.scss'
 
@@ -116,7 +117,7 @@ function TableGroup({
             }
           </ul> :
           <div className={styles.groupList}>
-            <img className={styles.groupListImage} src={data.tableChildren[0].image} alt="" loading="lazy"/>
+            <img className={styles.groupListImage} src={imagePathToSrc(data.tableChildren[0].image)} alt="" loading="lazy"/>
             <ul className={styles.listContainer}>
               {
                 data.tableChildren.map(

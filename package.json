@@ -78,11 +78,12 @@
     "directories": {
       "buildResources": "electron/build",
       "output": "electron/dist"
-    }
-  },
-  "publish": [
-    {
-      "vPrefixedTagName": false
-    }
-  ]
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "vPrefixedTagName": false
+      }
+    ]
+  }
 }

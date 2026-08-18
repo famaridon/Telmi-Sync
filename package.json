@@ -9,6 +9,9 @@
   "license": "MIT",
   "main": "public/electron.js",
   "type": "module",
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  },
   "scripts": {
     "start": "concurrently \"vite\" \"wait-on http://localhost:3000 && electron .\"",
     "lint": "eslint .",

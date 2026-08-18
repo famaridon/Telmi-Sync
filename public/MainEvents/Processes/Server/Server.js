@@ -20,19 +20,20 @@ const
       const int = ints[intName]
       for (const intInfo of int) {
         if (!intInfo.internal && intInfo.family === 'IPv4') {
-          const [a, b, c] = intInfo.address.split('.', 3)
+          const [a, b] = intInfo.address.split('.', 3)
           switch (a) {
             case '192':
               if (b === '168') {
                 addresses192.push(intInfo.address)
               }
               break
-            case '172':
+            case '172': {
               const bi = parseInt(b, 10)
               if (bi > 15 && bi < 32) {
                 addresses172.push(intInfo.address)
               }
               break
+            }
             case '10':
               addresses10.push(intInfo.address)
               break

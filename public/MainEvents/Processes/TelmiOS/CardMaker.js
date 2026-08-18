@@ -13,11 +13,12 @@ const
         return path.join(getExtraResourcesPath(), 'fat32', process.platform, 'formatter.bat')
       case 'darwin':
         return path.join(getExtraResourcesPath(), 'fat32', process.platform, 'formatter.sh')
-      case 'linux':
+      case 'linux': {
         const tmpPath = path.join(initTmpPath('script'), 'formatter.sh')
         fs.copyFileSync(path.join(getExtraResourcesPath(), 'fat32', process.platform, 'formatter.sh'), tmpPath)
         fs.chmodSync(tmpPath, 0o777)
         return tmpPath
+      }
       default:
         return null
     }

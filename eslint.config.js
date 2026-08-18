@@ -55,7 +55,7 @@ export default [
 
   // Electron main process and build tooling: node only, no DOM, no JSX.
   {
-    files: ['public/**/*.js', 'vite.config.js', 'eslint.config.js'],
+    files: ['main/**/*.js', 'vite.config.js', 'eslint.config.js'],
     languageOptions: {
       ecmaVersion: 2024,
       sourceType: 'module',

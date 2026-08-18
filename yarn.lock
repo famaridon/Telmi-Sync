@@ -4522,14 +4522,14 @@ dotenv@^16.4.5:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.6.1.tgz#773f0e69527a8315c7285d5ee73c4459d20a8020"
   integrity sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==
 
-drivelist@^11.2.0:
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/drivelist/-/drivelist-11.2.0.tgz#e2206ad7e1d3355bd431268384b648def694b9bf"
-  integrity sha512-d0/vhwQ6MGHXHke8ij6trPMYlc241t3/7PEgpMwUhmTtDR9pGbbuDbKw6uqSBUbryFxp+5nhuVmN0jxPsv7z3A==
+drivelist@^12.0.2:
+  version "12.0.2"
+  resolved "https://registry.yarnpkg.com/drivelist/-/drivelist-12.0.2.tgz#2821250ccc0ee3161cc86b72724ee64bca72aa29"
+  integrity sha512-Nps4pc1ukIqDj7v00wGgBkS7P3VVEZZKcaTPVcE1Yl+dLojXuEv76BuSg6HgmhjeOFIIMz8q7Y+2tux6gYqCvg==
   dependencies:
     bindings "^1.5.0"
     debug "^4.3.4"
-    node-addon-api "^5.0.0"
+    node-addon-api "^8.0.0"
     prebuild-install "^7.1.1"
 
 dunder-proto@^1.0.1:
@@ -7643,15 +7643,15 @@ node-abi@^4.2.0:
   dependencies:
     semver "^7.6.3"
 
-node-addon-api@^5.0.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-5.1.0.tgz#49da1ca055e109a23d537e9de43c09cca21eb762"
-  integrity sha512-eh0GgfEkpnoWDq+VY8OyvYhFEzBk6jIYbRKdIlyTiAXIVJ8PyBaKb0rp7oDtoddbdoHWhq8wwr+XZ81F1rpNdA==
-
 node-addon-api@^7.0.0:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-7.1.1.tgz#1aba6693b0f255258a049d621329329322aad558"
   integrity sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==
+
+node-addon-api@^8.0.0:
+  version "8.9.2"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-8.9.2.tgz#db7ac94a13ffd9b55e6cb04584bd5ef8e1d74b18"
+  integrity sha512-VijLXbi3UACN69I0JVXJsX4tjACjNoQDgv2gTF6sx2wWEi8tkSg2eX8p5gSIFi8z2+DL3oHmY6OyKce38SDolg==
 
 node-api-version@^0.2.1:
   version "0.2.1"

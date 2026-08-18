@@ -7,48 +7,40 @@
     "url": "http://dantsu.com/"
   },
   "license": "MIT",
-  "homepage": ".",
-  "main": "public/electron.js",
+  "main": "main/electron.js",
   "type": "module",
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  },
   "scripts": {
-    "start": "concurrently \"cross-env BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
-    "build": "react-scripts build && electron-builder --x64",
-    "build:mac": "react-scripts build && electron-builder --mac --x64 && electron-builder --mac --arm64 -c.mac.artifactName='${productName}-${version}-silicon.${ext}'"
+    "start": "concurrently \"vite\" \"wait-on http://localhost:3000 && electron .\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "eslint . && vite build && electron-builder --x64",
+    "build:mac": "eslint . && vite build && electron-builder --mac --x64 && electron-builder --mac --arm64 -c.mac.artifactName='${productName}-${version}-silicon.${ext}'"
   },
   "private": false,
   "dependencies": {
     "@expo/sudo-prompt": "^9.3.2",
-    "drivelist": "^11.2.0",
+    "drivelist": "^12.0.2",
     "electron-is-dev": "^3.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
-    "cross-env": "^7.0.3",
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-react": "^5.2.0",
+    "concurrently": "^10.0.5",
     "electron": "^43.4.0",
     "electron-builder": "^26.15.3",
-    "react-scripts": "5.0.1",
+    "eslint": "^10.8.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.4",
+    "globals": "^17.11.0",
     "sass": "^1.102.0",
-    "wait-on": "^7.2.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "vite": "^7.3.6",
+    "wait-on": "^9.1.0"
   },
   "build": {
     "appId": "com.dantsu.telmisync",

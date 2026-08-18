@@ -63,13 +63,13 @@ function StoreAudioBuilderCategory({audioListKeys, getStoriesSelected}) {
       onPreventChildDraggable
     } = useStoreAudioBuilderDragAndDrop(audioListKeys, setAudioList),
 
-    categoryTitle = !!audioListKeys.length ? (audioListKeys[audioListKeys.length - 1] + 1) + '/' + audioCategoryParent.audio.length + ' - ' + getLocale('category') : ''
+    categoryTitle = audioListKeys.length ? (audioListKeys[audioListKeys.length - 1] + 1) + '/' + audioCategoryParent.audio.length + ' - ' + getLocale('category') : ''
 
   return <li className={[
     styles.storeBuilderItemContainer,
     audioListKeys.length ? (audioListKeys.length % 2 ? styles.storeBuilderItemContainerBlue : styles.storeBuilderItemContainerBlue2) : ''
   ].join(' ')}>
-    {!!audioListKeys.length ?
+    {audioListKeys.length ?
       <div className={styles.storeBuilderItemTitleBar}
            title={categoryTitle}
            draggable={true}
